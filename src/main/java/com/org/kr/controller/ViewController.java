@@ -9,13 +9,13 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @Controller
-public class TestController {
+public class ViewController {
 
-	@RequestMapping("/chatting.do")
+	@RequestMapping("/main.do")
 	public ModelAndView SesssionTest(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
 		
-		mv.setViewName("chatting");
+		mv.setViewName("main");
 		return mv; 
 	}
 	
