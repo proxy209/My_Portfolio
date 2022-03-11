@@ -25,7 +25,9 @@ public class ActionController {
 	@RequestMapping("/login.do")
 	public ModelAndView login(@RequestParam Map map){
 		ModelAndView mv = new ModelAndView();
+		
 		sha256.shaEncrypt((String) map.get("passwd"));
+		
 		mv.setViewName("pjadView");
 		return mv;
 	}
