@@ -13,9 +13,5 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new CommonInterceptor())
 		.excludePathPatterns("/css/**", "/fonts/**", "/images/**", "/js/**", "/scss/**");
-		
-		registry.addInterceptor(new LoginInterceptor())
-		.addPathPatterns("/pjadmin.do")
-		.excludePathPatterns("/css/**", "/fonts/**", "/images/**", "/js/**", "/scss/**");
 	}
 }
