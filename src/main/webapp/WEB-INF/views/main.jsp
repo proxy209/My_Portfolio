@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!doctype html>
@@ -36,52 +37,13 @@
 		<div class="site-mobile-menu-body"></div>
 	</div>
 
-	<nav class="site-nav">
-		<div class="container">
-			<div class="site-navigation">
-				<a href="index.html" class="logo m-0 float-start">YHB<span class="text-primary">.</span> </a>
-
-				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li class="has-children">
-						<a href="projects.html">Projects</a>
-						<ul class="dropdown">
-							<li><a href="#">Commercial Building</a></li>
-							<li><a href="#">Cultural Lifestyle</a></li>
-							<li class="has-children">
-								<a href="#">Dropdown</a>
-								<ul class="dropdown">
-									<li><a href="#">Sub Menu One</a></li>
-									<li><a href="#">Sub Menu Two</a></li>
-									<li><a href="#">Sub Menu Three</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
-
-				
-
-				<a href="#" class="burger ml-auto float-end site-menu-toggle light js-menu-toggle d-inline-block d-lg-none" data-toggle="collapse" data-target="#main-navbar">
-					<span></span>
-				</a>
-				<ul class="site-menu float-end d-none d-md-block">
-					<!-- <li><a href="#" class="d-flex align-items-center text-white h2 fw-bold"><span class="icon-phone me-2"></span></a></li> -->
-				</ul>
-
-			</div>
-		</div>
-	</nav>
+	<%@ include file="nav/nav.jsp" %>
 
 	<div class="hero-2 overlay" style="background-image: url('resources/images/img_2.jpg');">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-5 mx-auto">
 					<h1 class="mb-5"><span>BLOG</span> & <span class="d-block"> PORTFOLIO</span></h1>
-
 					<!-- <div class="play-vid">
 						<a href="https://www.youtube.com/watch?v=mwtbEGNABWU" class="play glightbox">
 							<span class="icon-play"></span>
@@ -105,7 +67,7 @@
 					<h2 class="heading">What am i?</h2>
 					<p>이름 : 양효빈</p>
 					<p>나이 : 29세</p>
-					<p>학력 : 순천대학교 컴퓨터공학과(졸)</p>
+					<p>학력 : 순천대학교 컴퓨터공학과</p>
 					<p>취미 : 운동, 투자, 사진, 흥미가 생길 때 공부하기(?)</p>
 					</br>
 					<p>자기소개</p>
@@ -116,11 +78,11 @@
 				    한국고용정보원 웹 사이트 개편 및 유지보수, 레드캡 하이브리드 앱 프론트엔드 1차 개발에 참여했습니다.
 				    아직은 많이 부족한 주니어 개발자이지만 잘 부탁드립니다.
 					</p>
-					</br>
-					<p>SKILLS</p>
+					<!-- </br> -->
+					<!-- <p>SKILLS</p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Java, Spring</p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Mysql, Oracle</p>
-					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Github, Gitlab, Svn</p>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Github, Gitlab, Svn</p> -->
 					
 					<!-- <p><a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p> -->
 				</div>
@@ -134,8 +96,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
-					<h2 class="heading">Services</h2>
-					<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam.</p>
+					<h2 class="heading">Skils</h2>
+					<p></p>
 				</div>
 
 				<div class="col-lg-6 ms-auto">
@@ -237,7 +199,7 @@
 					<h2 class="heading">Projects</h2>
 				</div>
 				<div class="col-lg-4">
-					<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
+					<!-- <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p> -->
 				</div>
 			</div>
 
@@ -319,79 +281,8 @@
 	</div>
 	
 
-	<div class="site-footer bg-light">
-		<div class="container">
-
-			<div class="row justify-content-between">
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3 class="line-top">About</h3>
-						<p class="mb-5">안녕하십니까. 주니어 개발자입니다.</p>
-
-					</div>
-					<div class="widget">
-						<h3 class="line-top">GitHub</h3>
-						<ul class="social list-unstyled mb-5">
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-12">
-							<div class="widget">
-								<h3 class="line-top">E-mail</h3>
-							</div>
-						</div>
-						<!-- <div class="col-6 col-sm-6 col-md-4">
-							<div class="widget">
-								<ul class="links list-unstyled">
-									<li><a href="#">Home</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="#">Work</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">About Us</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-6 col-sm-6 col-md-4">
-							<div class="widget">
-								<ul class="links list-unstyled">
-									<li><a href="#">Press</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contact</a></li>
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Privacy</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-6 col-sm-6 col-md-4">
-							<div class="widget">
-								<ul class="links list-unstyled">
-									<li><a href="#">Privacy</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Careers</a></li>
-									<li><a href="#">Process</a></li>
-									<li><a href="#">About Us</a></li>
-								</ul>
-							</div>
-						</div> -->
-					</div>
-				</div>
-			</div>
-
-			<div class="row justify-content-center text-center copyright">
-				<div class="col-md-8">
-					<p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co" target="_blank" rel="nofollow noopener">Untree.co</a> &bullet; <a href="https://untree.co/license" target="_blank" rel="nofollow noopener">License</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
+	<%@ include file="footer/footer.jsp" %>
 	
-
 
 	<!-- Preloader -->
 	<div id="overlayer"></div>

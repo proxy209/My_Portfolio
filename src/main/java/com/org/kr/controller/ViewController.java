@@ -10,24 +10,36 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ViewController {
-
+	
+	@RequestMapping("/adlogin.do")
+	public ModelAndView adloginView(HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("login");
+		return mv; 
+	}
+	
+	@RequestMapping("/pjadmin.do")
+	public ModelAndView pjadminView(HttpServletRequest request) {
+		ModelAndView mv = new ModelAndView();
+		
+		mv.setViewName("pjadView");
+		return mv; 
+	}
+	
 	@RequestMapping("/main.do")
-	public ModelAndView SesssionTest(HttpServletRequest request) {
+	public ModelAndView mainView(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
 		
 		mv.setViewName("main");
 		return mv; 
 	}
 	
-	
-	@RequestMapping("/logOut.do")
-	public ModelAndView logOut(HttpServletRequest request) {
+	@RequestMapping("/pjview.do")
+	public ModelAndView pjView(HttpServletRequest request) {
 		ModelAndView mv = new ModelAndView();
 		
-		HttpSession session = request.getSession(true);
-		session.invalidate();
-		
-		mv.setViewName("test");
+		mv.setViewName("pjView");
 		return mv; 
 	}
 }
