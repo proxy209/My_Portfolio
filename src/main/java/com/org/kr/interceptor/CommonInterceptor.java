@@ -5,11 +5,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 
-public class CommonInterceptor extends HandlerInterceptorAdapter{
+public class CommonInterceptor implements HandlerInterceptor{
 
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -18,7 +18,7 @@ public class CommonInterceptor extends HandlerInterceptorAdapter{
 		logger.debug("===============================================");
 		logger.debug("==================== BEGIN ====================");
 		logger.debug("Request URI ===> " + request.getRequestURI());
-		return super.preHandle(request, response, handler);
+		return true;
 	}
 
 	@Override

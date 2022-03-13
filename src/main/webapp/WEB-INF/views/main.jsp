@@ -68,7 +68,7 @@
 					<p>이름 : 양효빈</p>
 					<p>나이 : 29세</p>
 					<p>학력 : 순천대학교 컴퓨터공학과</p>
-					<p>취미 : 운동, 투자, 사진, 흥미가 생길 때 공부하기(?)</p>
+					<p>취미 : 운동, 투자, 사진</p>
 					</br>
 					<p>자기소개</p>
 					<p>
@@ -79,7 +79,7 @@
 				    아직은 많이 부족한 주니어 개발자이지만 잘 부탁드립니다.
 					</p>
 					<!-- </br> -->
-					<!-- <p>SKILLS</p>
+					<!-- <p>SKILS</p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Java, Spring</p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Mysql, Oracle</p>
 					<p>&nbsp;&nbsp;&nbsp;&nbsp; -Github, Gitlab, Svn</p> -->
@@ -96,7 +96,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
-					<h2 class="heading">Skils</h2>
+					<h2 class="heading">Skills</h2>
 					<p></p>
 				</div>
 
@@ -105,18 +105,17 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="flush-headingOne">
 								<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-									Interior Design
+									JAVA, SPRING
 								</button>
 							</h2>
 							<div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
 								<div class="accordion-body">
 									<div class="row justify-content-between">
 										<div class="col-md-4">
-											<img src="resources/images/img_7.jpg" alt="Image" class="img-fluid">
+											<img src="resources/images/java.jpg" alt="Image" class="img-fluid">
 										</div>
 										<div class="col-md-8">
-											<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-											<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+											<p>좋은 소프트웨어를 만들기 위한 첫 걸음은 SOLID 원칙을 항상 생각하고 최대한 지키며 개발하기라고 생각합니다.</p>
 										</div>
 									</div>
 									
@@ -126,18 +125,17 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="flush-headingTwo">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-									Landscape Design
+									jQuery
 								</button>
 							</h2>
 							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
 								<div class="accordion-body">
 									<div class="row justify-content-between">
 										<div class="col-md-4">
-											<img src="resources/images/img_2.jpg" alt="Image" class="img-fluid">
+											<img src="resources/images/jquery.jpg" alt="Image" class="img-fluid">
 										</div>
 										<div class="col-md-8">
-											<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-											<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+											<p>경력을 쌓는 동안 가장 많이 사용해온 Javascript 라이브러리 입니다.</p>
 										</div>
 									</div>
 								</div>
@@ -146,18 +144,17 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="flush-headingThree">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-									Engineering Plan
+									MYSQL, ORACLE
 								</button>
 							</h2>
 							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
 								<div class="accordion-body">
 									<div class="row justify-content-between">
 										<div class="col-md-4">
-											<img src="resources/images/img_3.jpg" alt="Image" class="img-fluid">
+											<img src="resources/images/oracle.jpg" alt="Image" class="img-fluid">
 										</div>
 										<div class="col-md-8">
-											<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-											<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+											<p>아직 부족하지만 CRUD뿐만 아닌, 설계도 잘할 수 있는 개발자가 되겠습니다.</p>
 										</div>
 									</div>
 								</div>
@@ -167,7 +164,7 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="flush-headingFour">
 								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-									Architecture Design
+									GITLAB, SVN
 								</button>
 							</h2>
 							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -177,8 +174,7 @@
 											<img src="resources/images/img_4.jpg" alt="Image" class="img-fluid">
 										</div>
 										<div class="col-md-8">
-											<p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio.</p>
-											<a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a>
+											<p>주로 사용한 형상관리도구입니다.</p>
 										</div>
 									</div>
 								</div>
@@ -191,94 +187,30 @@
 		</div>
 	</div>
 
+        <div class="section sec-5">
+               <div class="container">
+                       <div class="row mb-5">
+                               <div class="col-lg-6">
+                                       <h2 class="heading">Projects</h2>
+                               </div>
+                       </div>
 
-	<div class="section sec-5">
-		<div class="container">
-			<div class="row mb-5">
-				<div class="col-lg-6">
-					<h2 class="heading">Projects</h2>
-				</div>
-				<div class="col-lg-4">
-					<!-- <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p> -->
-				</div>
-			</div>
-
-			<div class="row g-4">
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_8.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project One</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_2.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project Two</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_3.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project One</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_4.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project One</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_5.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project Two</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-					<div class="single-portfolio">
-						<a href="project-single.html">
-							<img src="resources/images/img_6.jpg" alt="Image" class="img-fluid">
-							<div class="contents">
-								<h3>Project One</h3>
-								<div class="cat">Construction</div>
-							</div>
-						</a>
-					</div>
-				</div>
-
-				<div class="col-md-12 text-center mt-5">
-					<p><a href="#" class="btn btn-primary me-4">See all projects</a></p>
-				</div>
-
-			</div>
-		</div>
-	</div>
+                       <div class="row g-4">
+                        <c:forEach var="list" items="${boardList}" varStatus="status">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                                        <div class="single-portfolio">
+                                                <a href="pjview.do?boardNo=${list.boardNo}">
+                                                        <img src="${list.filePath}/${list.fileSaveName}" alt="Image" class="img-fluid">
+                                                        <div class="contents">
+                                                                <h3>${list.boardSub}</h3>
+                                                        </div>
+                                                </a>
+                                        </div>
+                                </div>  
+                        </c:forEach>                    
+                       </div>
+               </div>
+       </div>
 	
 
 	<%@ include file="footer/footer.jsp" %>

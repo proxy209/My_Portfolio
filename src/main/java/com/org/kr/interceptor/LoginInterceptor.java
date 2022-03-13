@@ -2,26 +2,26 @@ package com.org.kr.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.servlet.HandlerInterceptor;
+import org.springframework.web.servlet.ModelAndView;
 
-public class LoginInterceptor extends HandlerInterceptorAdapter {
+public class LoginInterceptor implements HandlerInterceptor {
 	 
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-                HttpSession session = request.getSession();
-
-        if(request.getSession().getAttribute("test") == null){
-        
-            // 세션이 없을 시, login으로 Redirect
-            response.sendRedirect("/adlogin.do");
-            return false;
-        }
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+		return true;
+	}
 	
-        
-        return true;
+	public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView, ModelMap model) throws Exception {
+        try{
+            if( request.getSession().getAttribute("adminId") == null ){
+            	response.sendRedirect("/adlogin.do");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
-    
     
 }

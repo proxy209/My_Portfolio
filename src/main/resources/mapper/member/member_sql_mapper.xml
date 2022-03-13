@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="member">
+
+	<select id="selectUser" parameterType="map" resultType="int">
+		<![CDATA[
+	    SELECT EXISTS (
+	    	SELECT * FROM MEMBER_TABLE 
+	    	WHERE 
+	    	USER_ID = #{email} AND USER_PW = #{passwd}
+	    ) AS COUNT
+		]]>
+	</select>
+	
+	<insert id="boardUpload" parameterType="map">
+		<selectKey keyProperty="BOARD_NO" resultType="int" order="AFTER">
+			SELECT LAST_INSERT_ID()
+	    </selectKey>
+	    
+		<![CDATA[
+	  		INSERT INTO BOARD_TABLE(
+	  			BOARD_SUB
+	  			,BOARD_CONT
+	  			,BOARD_SITE
+	  			,BOARD_WORK_YEAR
+	  			,BOARD_WORK_START
+	  			,BOARD_WORK_END
+	  			,BOARD_DT
+	  			,USER_ID
+  			)VALUES(
+  				#{boardSub}
+  				,#{boardCont}
+  				,#{boardSite}
+  				,#{boardWorkYear}
+  				,#{boardWorkStart}
+  				,#{boardWorkEnd}
+  				,NOW()
+  				,#{userId}
+  			)
+		]]>
+	</insert>
+	
+	<insert id="fileUpload" parameterType="map">
+		<![CDATA[
+	  		INSERT INTO BOARD_FILE(
+	  			FILE_SAVE_NAME
+	  			,FILE_ORIGIN_NAME
+	  			,FILE_PATH
+	  			,FILE_SIZE
+	  			,BOARD_NO
+  			)VALUES(
+  				#{fileSaveName}
+  				,#{fileOriginName}
+  				,#{filePath}
+  				,#{fileSize}
+  				,#{boardNo}
+  			)
+		]]>
+	</insert>
+	
+	
+	<select id="boardList" parameterType="map" resultType="map">
+		<![CDATA[
+		   SELECT 
+				T1.BOARD_NO AS boardNo
+			    ,T1.BOARD_SUB AS boardSub
+			    ,T1.BOARD_CONT AS boardCont
+			    ,T1.BOARD_SITE AS boardSite
+			    ,T1.BOARD_WORK_YEAR AS boardWorkYear 
+			    ,T1.BOARD_WORK_START AS boardWorkStart
+			    ,T1.BOARD_WORK_END AS boardWorkEnd
+			    ,T2.FILE_SAVE_NAME AS fileSaveName
+			    ,SUBSTR(T2.FILE_PATH, 48, 100) AS filePath
+			FROM 
+				BOARD_TABLE T1 LEFT JOIN BOARD_FILE T2 
+				ON T1.BOARD_NO = T2.BOARD_NO
+		]]>
+	</select>
+	
+	<select id="boardDetail" parameterType="map" resultType="map">
+		<![CDATA[
+		   SELECT 
+				T1.BOARD_NO AS boardNo
+			    ,T1.BOARD_SUB AS boardSub
+			    ,T1.BOARD_CONT AS boardCont
+			    ,T1.BOARD_SITE AS boardSite
+			    ,T1.BOARD_WORK_YEAR AS boardWorkYear 
+			    ,T1.BOARD_WORK_START AS boardWorkStart
+			    ,T1.BOARD_WORK_END AS boardWorkEnd
+			    ,T2.FILE_SAVE_NAME AS fileSaveName
+			    ,SUBSTR(T2.FILE_PATH, 48, 100) AS filePath
+			FROM 
+				BOARD_TABLE T1 LEFT JOIN BOARD_FILE T2 
+				ON T1.BOARD_NO = T2.BOARD_NO	
+			WHERE 
+				T1.BOARD_NO = #{boardNo}	
+		]]>
+	</select>
+</mapper>

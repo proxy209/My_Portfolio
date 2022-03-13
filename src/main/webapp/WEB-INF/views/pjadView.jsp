@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!doctype html>
 <html lang="utf-8">
 <head>
@@ -44,7 +47,7 @@
                 <div class="container">
                         <div class="row align-items-center">
                                 <div class="col-lg-5 mx-auto ">
-                                        <h1 class="mb-5 text-center"><span>관리자님 어서오세요.</span></h1>
+                                        <h1 class="mb-5 text-center"><span><c:if test="${admin eq 'admin'}">관리자</c:if>님 어서오세요.</span></h1>
 
 
                                         <!-- <div class="intro-desc text-left">
@@ -58,36 +61,38 @@
 
 
         <div class="section sec-3">
+       		<form name="boardFrom" method="POST" action="/api/boarSave.do" enctype="multipart/form-data">
+       		<input type="hidden" name="userId" value="${admin}">
                 <div class="container">
-
                         <div class="row mb-5 justify-content-between">
-                                <div class="col-lg-6 mb-lg-0 mb-4">
-                                        <img src="resources/images/img_7.jpg" alt="Image" class="img-fluid">
+                        <input type="file" name="thumb" id="image" accept="image/*" onchange="setThumbnail(event);"/>
+                                <div class="col-lg-6 mb-lg-0 mb-4 image_container">
+                                        <!-- <img src="resources/images/img_7.jpg" alt="Image" class="img-fluid"> -->
+                                        <div id="image_container" style="border: solid 1px black; widht:487px; height: 432px;" class="img-fluid"></div>
                                 </div>
                                 <div class="col-lg-5">
-                                        <div class="heading">Description</div>
-                                        <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae placeat, unde sequi quas ipsum illo? Commodi accusantium, sit eveniet? Maiores tempora corporis ea nostrum magnam similique optio autem, dolor incidunt?</p>
-                                        <p>Recusandae quam dicta repellat consequatur, facilis magnam minus unde, asperiores voluptatibus temporibus obcaecati, nihil libero. Maxime consectetur asperiores excepturi quidem deleniti, autem incidunt? Error nisi, eius fugiat expedita quia cupiditate!</p>
-                                        <p><a href="#" class="btn btn-primary">Visit Website</a></p>
+                                        <input class="boardSub" name="boardSub" placeholder="제목을 입력해주세요." style="width: 100%">
+                                       	<p><textarea class="boardCont" placeholder="내용을 입력해주세요." name="boardCont" style="width: 100%; height: 500px; margin-top:10px"></textarea><p>
+                                        <p><input name="boardSite" placeholder="링크를 입력해주세요." style="width: 100%"></p>
                                         
                                 </div>
                         </div>
                         <div class="row">
                                 <div class="col-sm-3 border-left">
-                                        <span class="text-black-50 d-block">Work year:</span>  2020
+                                        <span class="text-black-50 d-block">Work year:</span>  <input name="boardWorkYear">
+                                </div>                             
+                                <div class="col-sm-3 border-left">
+                                        <span class="text-black-50 d-block">Started:</span> <input name="boardWorkStart">
                                 </div>
                                 <div class="col-sm-3 border-left">
-                                        <span class="text-black-50 d-block">Client:</span> XYZ Inc.
+                                        <span class="text-black-50 d-block">Finished:</span> <input name="boardWorkEnd">
                                 </div>
                                 <div class="col-sm-3 border-left">
-                                        <span class="text-black-50 d-block">Started:</span> 25 Jan 2020
-                                </div>
-                                <div class="col-sm-3 border-left">
-                                        <span class="text-black-50 d-block">Finished:</span> 02 Dec 2020
+                                	<button class="d-block btn btn-primary" type="submit">저장</button>
                                 </div>
                         </div>
-                </div>
+                </div>              
+        	</form>
         </div>
 
 
@@ -97,81 +102,21 @@
                                 <div class="col-lg-6">
                                         <h2 class="heading">Projects</h2>
                                 </div>
-                                <div class="col-lg-6 ms-auto">
-                                        <p>Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque.</p>
-                                </div>
                         </div>
 
                         <div class="row g-4">
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_8.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project One</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_2.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project Two</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_3.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project One</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_4.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project One</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_5.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project Two</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-                                        <div class="single-portfolio">
-                                                <a href="project-single.html">
-                                                        <img src="resources/images/img_6.jpg" alt="Image" class="img-fluid">
-                                                        <div class="contents">
-                                                                <h3>Project One</h3>
-                                                                <div class="cat">Construction</div>
-                                                        </div>
-                                                </a>
-                                        </div>
-                                </div>
-
-                                
+	                        <c:forEach var="list" items="${boardList}" varStatus="status">
+	                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+	                                        <div class="single-portfolio">
+	                                                <a href="pjview.do?boardNo=${list.boardNo}">
+	                                                        <img src="${list.filePath}/${list.fileSaveName}" alt="Image" class="img-fluid">
+	                                                        <div class="contents">
+	                                                                <h3>${list.boardSub}</h3>
+	                                                        </div>
+	                                                </a>
+	                                        </div>
+	                                </div>  
+	                        </c:forEach>                    
                         </div>
                 </div>
         </div>
@@ -195,4 +140,22 @@
 	<script src="resources/js/counter.js"></script>
 	<script src="resources/js/custom.js"></script>
 </body>
+
+<script> 
+	const setThumbnail = (event) => {
+		let reader = new FileReader(); 
+		$('#image_container').children().remove();
+		
+		reader.onload = function(event) {
+				let img = document.createElement("img"); 
+				img.setAttribute("src", event.target.result); 	
+				img.setAttribute('style', 'width: 487px; height: 432px;');
+				document.querySelector("div#image_container").appendChild(img); 
+		}; 
+		
+		reader.readAsDataURL(event.target.files[0]); 
+	} 
+</script>
+
+
 </html>

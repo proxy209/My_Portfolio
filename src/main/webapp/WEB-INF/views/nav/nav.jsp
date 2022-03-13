@@ -4,7 +4,7 @@
 				<a href="main.do" class="logo m-0 float-start">YHB<span class="text-primary">.</span> </a>
 				<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-start">
 					<li class="active"><a href="main.do">Home</a></li>
-					<li><a href="services.html">Project</a></li>
+					<!-- <li><a href="services.html">Project</a></li> -->
 					<!-- <li class="has-children">
 						<a href="projects.html">Projects</a>
 						<ul class="dropdown">

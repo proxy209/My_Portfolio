@@ -9217,7 +9217,7 @@ a {
     content: "";
     position: absolute;
     height: 1px;
-    width: 300%;
+    width: 150%;
     background: #000;
     right: 0;
     bottom: 0; }

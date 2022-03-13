@@ -5,7 +5,6 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.org.kr.interceptor.CommonInterceptor;
-import com.org.kr.interceptor.LoginInterceptor;
 
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer{
@@ -14,7 +13,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer{
 		registry.addInterceptor(new CommonInterceptor())
 		.excludePathPatterns("/css/**", "/fonts/**", "/images/**", "/js/**", "/scss/**");
 		
-		registry.addInterceptor(new LoginInterceptor())
+		registry.addInterceptor(new CommonInterceptor())
 		.addPathPatterns("/pjadmin.do")
 		.excludePathPatterns("/css/**", "/fonts/**", "/images/**", "/js/**", "/scss/**");
 	}
