@@ -87,7 +87,7 @@
 					<!-- <p><a href="#" class="more-2">Learn more <span class="icon-arrow_forward"></span></a></p> -->
 				</div>
 				<div class="col-lg-7 ms-auto">
-					<img src="resources/images/IMG_5192.jpg" alt="Image" class="img-fluid img-r">
+					<img src="resources/images/IMG_5192.jpg" alt="Image" class="img-fluid img-r" style="width: 500px; height: 630px;">
 				</div>			</div>
 		</div>
 	</div>
@@ -171,7 +171,7 @@
 								<div class="accordion-body">
 									<div class="row justify-content-between">
 										<div class="col-md-4">
-											<img src="resources/images/img_4.jpg" alt="Image" class="img-fluid">
+											<img src="resources/images/gitlab.jpg" alt="Image" class="img-fluid">
 										</div>
 										<div class="col-md-8">
 											<p>주로 사용한 형상관리도구입니다.</p>
